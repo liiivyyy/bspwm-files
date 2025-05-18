@@ -37,7 +37,7 @@ chmod +x ~/.config/bspwm/bspwmrc
 
 echo "instalando polybar"
 cd $TEMP_DIR
-git clone https://github.com/VaughnValle/blue-sky.git
+#git clone https://github.com/VaughnValle/blue-sky.git
 git clone --recursive https://github.com/polybar/polybar
 cd polybar/
 mkdir build
@@ -47,9 +47,9 @@ make -j$(nproc)
 sudo make install
 
 echo "configurando polybar"
-cp -r ~/temp/blue-sky/polybar ~/.config
-sudo cp ~/.config/polybar/fonts/* /usr/share/fonts/truetype
+#cp -r ~/temp/blue-sky/polybar ~/.config
 cp -r ~/macroscript/polybar2/* ~/.config/polybar
+sudo cp ~/.config/polybar/fonts/* /usr/share/fonts/truetype
 sudo cp ~/macroscript/hacknerd/* /usr/local/share/fonts/
 sudo fc-cache -v
 
